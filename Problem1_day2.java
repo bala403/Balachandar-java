@@ -1,8 +1,4 @@
 import java.util.Scanner;
-
-/**
- * Problem1-day2
- */
 public class Problem1_day2 {
     public static void main(String str[]){
         int n,i,N,M;
