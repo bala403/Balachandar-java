@@ -1,0 +1,22 @@
+import java.util.*;
+class UniqueCharacters 
+{
+    public static void main(String args[]) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String inputStr = scanner.nextLine();
+        boolean[] seen = new boolean[256];
+        StringBuilder outputStr = new StringBuilder();
+        for (char c : inputStr.toCharArray()) 
+        {
+            if (!seen[(int) c]) 
+            {
+                seen[(int) c] = true;
+                outputStr.append(c);
+            }
+        }
+        scanner.close();
+        System.out.println("Unique characters: " + outputStr.toString());
+    }
+}

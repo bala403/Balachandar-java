@@ -1,0 +1,25 @@
+import java.util.*;
+class MaxSubarraySum 
+{
+    public static void main(String args[]) 
+    {
+        Scanner s= new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int n = s.nextInt();
+        int[] nums = new int[n];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) 
+        {
+            nums[i] = s.nextInt();
+        }
+        int currentSum = nums[0];
+        int maxSum = nums[0];
+        for (int i = 1; i < n; i++) 
+        {
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            maxSum = Math.max(maxSum, currentSum);
+        }
+        System.out.println("Maximum subarray sum: " + maxSum);
+        s.close();
+    }
+}

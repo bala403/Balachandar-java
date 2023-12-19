@@ -1,0 +1,60 @@
+import java.util.*;
+class Marks
+{
+    public int m1,m2,m3,m4,m5,m6;
+    public int total;
+    public float aggregate;
+    void getdata1()
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter the marks for first subject :");
+        m1=s.nextInt();
+        System.out.print("Enter the marks for second subject :");
+        m2=s.nextInt();
+        System.out.print("Enter the marks for third subject :");
+        m3=s.nextInt();
+        System.out.print("Enter the marks for fourth subject :");
+        m4=s.nextInt();
+        System.out.print("Enter the marks for fifth subject :");
+        m5=s.nextInt();
+        System.out.print("Enter the marks for sixth subject :");
+        m6=s.nextInt();
+        total=m1+m2+m3+m4+m5+m6;
+        System.out.print("The total marks is :"+total);
+        aggregate=total/6;
+        System.out.println("The aggreagate is :"+aggregate);
+        s.close();
+    }
+}
+class Grades1 extends Marks
+{
+    void getdata2()
+    {
+        if(aggregate>=75)
+        {
+            System.out.println("You got distinction");
+        }
+        else if(aggregate>=60&&aggregate<75)
+        {
+            System.out.println("You got first grade");
+        }
+        else if(aggregate>=50 && aggregate<60)
+        {
+            System.out.println("You got second grade");
+        }
+        else if(aggregate>=40 && aggregate<50)
+        {
+            System.out.println("You got third division");
+        }
+        else
+        {
+            System.out.println("You got failed");
+        }
+    }
+    public static void main(String args[])
+    {
+        Grades1 grades1=new Grades1();
+        grades1.getdata1();
+        grades1.getdata2();
+    }
+}

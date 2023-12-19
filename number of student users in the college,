@@ -1,0 +1,17 @@
+import java.util.*;
+class StudentUsers
+{
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        int Student_users,Staff_users,Total_users;
+        System.out.print("Enter the total number of users :");
+        Total_users=s.nextInt();
+        System.out.print("Enter the total number of staff users :");
+        Staff_users=s.nextInt();
+        int result=Staff_users/3;
+        Student_users=Total_users-(Staff_users+result);
+        System.out.print("The total number of student users are :"+Student_users);
+        s.close();
+    }
+}

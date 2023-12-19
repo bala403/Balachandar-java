@@ -1,0 +1,34 @@
+import java.util.*;
+class CompositeNumbers 
+{
+    public static void main(String args[]) 
+    {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the lower bound (a): ");
+        int a = s.nextInt();
+        System.out.print("Enter the upper bound (b): ");
+        int b = s.nextInt();
+        System.out.println("Composite numbers between " + a + " and " + b + ":");
+        for (int num = a+1; num <= b; num++) 
+        {
+            if (num >= 4) 
+            {
+                boolean isComposite = false;
+                for (int i = 2; i <= Math.sqrt(num); i++) 
+                {
+                    if (num % i == 0) 
+                    {
+                        isComposite = true;
+                        break;
+                    }
+                }
+                if (isComposite) 
+                {
+                    System.out.print(num + " ");
+                }
+            }
+        }
+        System.out.println();
+        s.close();
+    }
+}
